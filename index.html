@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>Bubbles</title>
+    <script src="bubbles.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="container-lg">
+    <h2>Bubbles</h2>
+    
+    <!-- Debug -->
+    <!-- <p><button type="button" onclick="changePosCircles(bubbleList, c, ctx, null)">calcOneStep</button></p> -->
+    <!-- <p><button type="button" onclick="animatePos(bubbleList, c, ctx)">animatePos</button></p> -->
+
+    <!-- Canvas -->
+    <canvas id="bubblesCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+    <!-- Semester Buttons -->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="my-3" id="skillLinks"></div>
+        </div>
+    </div>
+
+    <p id="debug"></p>
+
+</div>
+
+<script>
+    // GLOBALS
+    bubbleList = [];
+    moveBubbles = null; //time function
+
+    // Canvas
+    c = document.getElementById("bubblesCanvas");
+    ctx = c.getContext("2d");
+
+    // Create random size bubbles
+    makeBubbles(bubbleList, c, ctx);
+    
+    // Print links
+    printLinks(bubbleList);
+
+    // Animate positions
+    animatePos(bubbleList, c, ctx);
+
+    // Parameter nr (0) ohne Funktion
+    // setPosCircles(0);
+    // drawBubbles();
+    //changeToStaticPos();
+    // animatePos();
+
+
+    //a=document.querySelector("#p1");
+
+    // a.children[0] = <a id="1" href="#">
+    //a.children[0].addEventListener('click', alert('0 clicked'))
+
+</script>
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
+</body>
+</html>
